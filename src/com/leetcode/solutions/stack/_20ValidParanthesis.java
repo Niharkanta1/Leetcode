@@ -1,4 +1,4 @@
-package com.leetcode.solutions;
+package com.leetcode.solutions.stack;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,9 +22,9 @@ public class _20ValidParanthesis {
 		map.put(']', '[');
 		map.put('}', '{');
 
-		for(Character c: s.toCharArray()) {
-			if(map.containsKey(c)) {
-				if(!stack.empty() && stack.peek() == map.get(c)) {
+		for (Character c : s.toCharArray()) {
+			if (map.containsKey(c)) {
+				if (!stack.empty() && stack.peek() == map.get(c)) {
 					stack.pop();
 				} else {
 					return false; // invalid bracket

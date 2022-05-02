@@ -1,7 +1,4 @@
-package com.leetcode.solutions;
-
-import java.util.Arrays;
-import java.util.Locale;
+package com.leetcode.solutions.two_pointers;
 
 /*
  * @created 02-05-2022
@@ -19,8 +16,8 @@ public class _125ValidPalindrome {
 		//s = s.toLowerCase(Locale.ROOT);
 		var content = new StringBuilder();
 
-		for(int i=0; i < s.length(); i++) {
-			if(Character.isLetterOrDigit(s.charAt(i)) && s.charAt(i) != ' ') {
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.isLetterOrDigit(s.charAt(i)) && s.charAt(i) != ' ') {
 				content.append(s.charAt(i));
 			}
 		}
