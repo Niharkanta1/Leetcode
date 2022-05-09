@@ -28,4 +28,23 @@ public class _242isAnagram {
 
 		return true;
 	}
+
+	public boolean isAnagram2(String s, String t) {
+		if (s.length() != t.length()) return false;
+		if (s.equals(t)) return true;
+
+		int[] charCount = new int[26];
+
+		for(int i=0; i < s.length(); i++) {
+			charCount[s.charAt(i)-'a']++;
+			charCount[t.charAt(i)-'a']--;
+		}
+
+		for(int count : charCount) {
+			if(count != 0) return false;
+		}
+
+
+		return true;
+	}
 }
